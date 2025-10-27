@@ -11,10 +11,10 @@ export default async function CoreLayout({
   return (
     <SidebarProvider defaultOpen={false}>
       <AppSidebar />
-      <div className="relative w-full overflow-x-hidden">
+      <div className="relative w-full overflow-x-hidden bg-accent">
         <AppNavbar />
         {children}
-      </div>
+        </div>
     </SidebarProvider>
   );
 }
