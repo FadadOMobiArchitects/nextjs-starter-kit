@@ -5,7 +5,7 @@ import { COOKIE_CONFIG } from "@/constants/cookies";
 // Create axios instance with base configuration
 const createAxiosInstance = (): AxiosInstance => {
   const instance = axios.create({
-    baseURL: process.env.NAREVA_URL,
+    baseURL: process.env.BASE_API_URL, // Base URL from environment variable
     timeout: 30000,
   });
 
