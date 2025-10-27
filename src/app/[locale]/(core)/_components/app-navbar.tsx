@@ -3,7 +3,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 
 export default async function AppNavbar() {
   return (
-    <header className="px-4 md:px-6 border-b sticky top-0 z-50 transition-all duration-300">
+    <header className="px-4 md:px-6 bg-sidebar border-b sticky top-0 z-50 transition-all duration-300">
       <div className="flex h-18 items-center justify-between gap-4">
         {/* Left side */}
         <div className="flex items-center gap-2">

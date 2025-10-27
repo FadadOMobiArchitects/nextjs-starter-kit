@@ -56,7 +56,7 @@ export function AppSidebar() {
       <SidebarHeader className="flex items-center justify-center mb-2 h-18">
         <SidebarMenu>
           <SidebarMenuItem className="flex items-center justify-center">
-            <div className="text-lg font-medium">KIT</div>
+            <div className="text-lg font-medium">LG</div>
           </SidebarMenuItem>
         </SidebarMenu>
       </SidebarHeader>
