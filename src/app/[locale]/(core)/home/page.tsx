@@ -1,6 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import { DataTable } from "./_components/data-table";
 import { columns } from "./_components/columns";
+import ServerPagination from "@/components/generics/server-pagination";
 
 export default async function HomePage() {
   const t = await getTranslations("HomePage");
@@ -59,6 +60,15 @@ export default async function HomePage() {
             page={+page}
             size={+size}
           />
+
+          <div className="my-4">
+            <ServerPagination
+              page={page}
+              dataCount={totalCount}
+              currentItemsCount={utilisateurs.length}
+              itemsPerPage={size}
+            />
+          </div>
         </div>
       </div>
     </div>
