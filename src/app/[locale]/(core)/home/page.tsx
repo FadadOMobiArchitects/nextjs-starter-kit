@@ -1,7 +1,16 @@
+import { Button } from "@/components/ui/button";
 import { getTranslations } from "next-intl/server";
 
 export default async function HomePage() {
   const t = await getTranslations("HomePage");
 
-  return <h1>{t("title")}</h1>;
+  return (
+    <div className="m-10 text-center space-y-2">
+      <h1>{t("title")}</h1>
+
+      <Button variant="default" loading>
+        Loading...
+      </Button>
+    </div>
+  );
 }
