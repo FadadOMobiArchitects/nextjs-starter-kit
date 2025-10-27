@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import { getTranslations } from "next-intl/server";
 
 export default async function HomePage() {
@@ -6,11 +5,7 @@ export default async function HomePage() {
 
   return (
     <div className="case text-center space-y-4">
-      <h1>{t("title")}</h1>
-
-      <Button variant="default" loading>
-        Loading...
-      </Button>
+      <h1 className="text-lg">{t("title")}</h1>
     </div>
   );
 }
