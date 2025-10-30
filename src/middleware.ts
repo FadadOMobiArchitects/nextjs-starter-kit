@@ -1,5 +1,4 @@
 import type { NextRequest } from "next/server";
-import { NextResponse } from "next/server";
 import createMiddleware from "next-intl/middleware";
 import { routing } from "./i18n/routing";
 
@@ -7,16 +6,6 @@ import { routing } from "./i18n/routing";
 const intlMiddleware = createMiddleware(routing);
 
 export default async function middleware(request: NextRequest) {
-  const { pathname } = request.nextUrl;
-
-  // Check if user is accessing the root path
-  if (pathname === "/") {
-    // Redirect to default locale (ex: /fr/home) page
-    return NextResponse.redirect(
-      new URL(`/${routing.defaultLocale}/home`, request.url)
-    );
-  }
-
   // Let intl middleware handle the request
   const response = intlMiddleware(request);
 
