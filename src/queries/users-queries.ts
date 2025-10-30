@@ -1,14 +1,15 @@
-import { requestUsers } from "@/utils/api-requests";
+import { ENDPOINTS } from "@/constants/endpoints";
+import { apiGet } from "@/lib/axios";
 
 export const fetchUsers = async () => {
   try {
-    const res = await requestUsers();
+    const res = await apiGet(ENDPOINTS.USERS.GET);
 
     return {
       users: res,
     };
   } catch (error) {
-    console.error("API Error while fetching users:", error);
+    console.error("Error fetching users:", error);
     throw error;
   }
 };

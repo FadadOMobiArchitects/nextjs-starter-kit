@@ -1,5 +1,5 @@
 export const ENDPOINTS = {
-  // Example Users related endpoints
+  // Example users related endpoints
   USERS: {
     GET: "/users",
     GET_BY_ID: (id: string) => `/users/${id}`,

@@ -1,4 +1,4 @@
-import { LanguageSelector } from "@/components/generics/language-selector";
+import { LanguageSelector } from "@/components/common/language-selector";
 import { fetchUsers } from "@/queries/users-queries";
 import { getTranslations } from "next-intl/server";
 
