@@ -14,7 +14,7 @@ export default async function HomePage() {
 
       <div>
         <h1 className="text-base">{t("title")}</h1>
-        <p className="text-sm text-muted-foreground">Example fetching users:</p>
+        <p className="text-sm text-muted-foreground">{t("description")}</p>
       </div>
 
       <ul>
