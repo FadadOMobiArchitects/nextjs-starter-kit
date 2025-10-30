@@ -1,5 +1,6 @@
 {
   "HomePage": {
-    "title": "Next.js Starter Kit Template"
+    "title": "Next.js Starter Kit Template",
+    "description": "Example fetching users :"
   }
 }

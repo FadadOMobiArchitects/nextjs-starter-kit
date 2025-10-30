@@ -1,5 +1,6 @@
 {
   "HomePage": {
-    "title": "Modèle de kit de démarrage Next.js"
+    "title": "Modèle de kit de démarrage Next.js",
+    "description": "Exemple de récupération des utilisateurs :"
   }
 }
