@@ -56,18 +56,15 @@ export const LanguageSelector = ({ className, align = "center" }: Props) => {
     <DropdownMenu modal={false}>
       <DropdownMenuTrigger asChild>
         <Button
-          variant="outline"
+          variant="secondary"
           aria-label={`Select language (current ${locale})`}
-          className={cn(
-            "flex flex-row items-center gap-2 hover:bg-white",
-            className
-          )}
+          className={cn("flex flex-row items-center", className)}
         >
           <span className="uppercase inline-block">{locale}</span>
         </Button>
       </DropdownMenuTrigger>
 
-      <DropdownMenuContent align={align} className="w-36">
+      <DropdownMenuContent align={align}>
         {localesToShow.map((currentLocale) => {
           const isActive = currentLocale === locale;
           return (
