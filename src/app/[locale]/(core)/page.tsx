@@ -16,8 +16,11 @@ export default async function CorePage() {
       <h1 className="text-lg font-medium">{t("title")}</h1>
 
       <Link href="/dashboard">
-        <Button startIcon={<LayoutDashboard strokeWidth={1.75} />}>
-          Access The Dashboard
+        <Button
+          variant="secondary"
+          startIcon={<LayoutDashboard strokeWidth={2} />}
+        >
+          {t("dashboardButton")}
         </Button>
       </Link>
     </div>

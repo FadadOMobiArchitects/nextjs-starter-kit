@@ -25,7 +25,6 @@ export const LanguageSelector = ({ className, align = "center" }: Props) => {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
-  // Only English and French are supported in this starter kit
   const localeNames: Record<string, string> = {
     en: "English",
     fr: "Français",
@@ -56,9 +55,12 @@ export const LanguageSelector = ({ className, align = "center" }: Props) => {
     <DropdownMenu modal={false}>
       <DropdownMenuTrigger asChild>
         <Button
-          variant="secondary"
+          variant="ghost"
           aria-label={`Select language (current ${locale})`}
-          className={cn("flex flex-row items-center", className)}
+          className={cn(
+            "flex flex-row items-center p-0 rounded-full size-10",
+            className
+          )}
         >
           <span className="uppercase inline-block">{locale}</span>
         </Button>
