@@ -13,11 +13,14 @@ import {
 } from "@tanstack/react-table";
 import { ReusableTable } from "@/components/table/reusable-data-table";
 import { caseInsensitiveText } from "@/utils/table-column-sort";
+import { useTranslations } from "next-intl";
 
 export function DashboardTable<TData, TValue>({
   data,
   columns,
 }: Readonly<DataTableProps<TData, TValue>>) {
+  const t = useTranslations("Dashboard.Page");
+
   const [sorting, setSorting] = useState<SortingState>([]);
   const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([]);
   const [rowSelection, setRowSelection] = useState({});
@@ -58,9 +61,10 @@ export function DashboardTable<TData, TValue>({
   return (
     <>
       <div className="mb-6 flex flex-col lg:flex-row lg:items-center items-start justify-between gap-4 w-full">
-        <h3 className="text-xl font-semibold uppercase">
-          Liste des utilisateurs
-        </h3>
+        <div className="relative space-y-px">
+          <h3 className="text-xl font-semibold uppercase">{t("title")}</h3>
+          <p className="text-muted-foreground text-sm">{t("description")}</p>
+        </div>
 
         <div className="grid sm:grid-cols-2 gap-2 items-center"></div>
       </div>

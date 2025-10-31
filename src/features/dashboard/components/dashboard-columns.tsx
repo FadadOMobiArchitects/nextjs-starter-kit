@@ -4,6 +4,9 @@ import { ColumnDef } from "@tanstack/react-table";
 import { ArrowUpDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+import { format } from "date-fns";
+import { fr } from "date-fns/locale";
+
 export const DashboardColumns: ColumnDef<DashboardUser>[] = [
   {
     accessorKey: "lastName",
@@ -79,8 +82,11 @@ export const DashboardColumns: ColumnDef<DashboardUser>[] = [
     header: "Date de création",
     cell: ({ row }) => {
       const createdAt: string = row.getValue("createdAt");
+      const formattedDate = createdAt
+        ? format(new Date(createdAt), "dd/MM/yyyy HH:mm", { locale: fr })
+        : "-";
 
-      return <div className="font-medium">{createdAt || "-"}</div>;
+      return <div className="font-medium">{formattedDate}</div>;
     },
   },
 ];

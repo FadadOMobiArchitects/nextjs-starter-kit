@@ -1,5 +1,5 @@
 import { SidebarTrigger } from "@/components/ui/sidebar";
-import { Skeleton } from "@/components/ui/skeleton";
+import DashboardNavbarProfile from "./dashboard-navbar-profile";
 
 export default async function DashboardNavbar() {
   return (
@@ -11,8 +11,8 @@ export default async function DashboardNavbar() {
         </div>
 
         {/* Right side */}
-        <div className="flex items-center gap-4">
-          <Skeleton className="size-8 rounded-full" />
+        <div className="flex items-center gap-2">
+          <DashboardNavbarProfile />
         </div>
       </div>
     </header>
