@@ -1,5 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
-import { Metadata } from "next";
+import { Metadata, Viewport } from "next";
 import { cookies } from "next/headers";
 import "./globals.css";
 
@@ -20,17 +20,24 @@ export const metadata: Metadata = {
   authors: [{ name: "Oussama Fadad" }],
 };
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
 export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   const cookieStore = await cookies();
+  const locale = cookieStore.get("NEXT_LOCALE")?.value || "fr";
 
   return (
-    <html lang={cookieStore.get("NEXT_LOCALE")?.value === "en" ? "en" : "fr"}>
+    <html lang={locale} dir="ltr">
       <body
         className={`${geistSans.className} ${geistMono.variable} antialiased`}
+        suppressHydrationWarning={true}
       >
         {children}
       </body>

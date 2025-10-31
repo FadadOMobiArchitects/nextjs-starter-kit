@@ -1,5 +1,18 @@
 {
-  "HomePage": {
-    "title": "Hello world!"
+  "CorePage": {
+    "title": "Next.js Starter Kit Template",
+    "dashboardButton": "Access The Dashboard"
+  },
+
+  "Dashboard": {
+    "Navbar": {
+      "manageAccount": "Manage Account",
+      "logout": "Logout"
+    },
+
+    "Page": {
+      "title": "Dashboard",
+      "description": "Example of fetching users:"
+    }
   }
 }

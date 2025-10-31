@@ -1,5 +1,18 @@
 {
-  "HomePage": {
-    "title": "Bonjour le monde!"
+  "CorePage": {
+    "title": "Modèle de kit de démarrage Next.js",
+    "dashboardButton": "Accéder au tableau de bord"
+  },
+
+  "Dashboard": {
+    "Navbar": {
+      "manageAccount": "Gérer le compte",
+      "logout": "Déconnexion"
+    },
+
+    "Page": {
+      "title": "Tableau de bord",
+      "description": "Exemple de récupération des utilisateurs :"
+    }
   }
 }
